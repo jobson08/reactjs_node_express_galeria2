@@ -19,7 +19,7 @@ class App extends Component {
 	if (response.status !== 200) throw Error(body.message);
 
 	return body;
-  };
+	};
 
   render() {
 	return (
