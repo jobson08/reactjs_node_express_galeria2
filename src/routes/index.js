@@ -1,13 +1,16 @@
+'use strict'
+
 const { Router } = require('express');
 const router = Router();
 
-router.get('/api', (req, res) => {
-  res.send({ express: 'Api para o projeto' });
+router.get('/', (req, res) => {
+  res.send('Sevidor rodando');
 });
 
-router.get('/api/mensagem', (req, res) => {
-    res.send({ express: 'Projeto React nodejs com express' });
-  });
+
+//Rotas
+router.use('/', require('./mensagem'));
+router.use('/', require('./imagens'));
 
 
 module.exports = router;

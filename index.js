@@ -1,2 +1,4 @@
-const app = require('./src/server');
+'use strict'
+
+const server = require('./src/server');
 
